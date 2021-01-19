@@ -1,0 +1,11 @@
+main: me.magiccmax.magicctime.MagiccTime
+name: MagiccTime
+version: '1.0'
+description: Time logger
+load: POSTWORLD
+author: MagiccMax
+commands:
+   playTime:
+      description: Your description
+      usage: /playTime
+      permission: magicctime.playtimeCMD

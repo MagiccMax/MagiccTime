@@ -1,3 +1,4 @@
+api-version: 1.16
 main: me.magiccmax.magicctime.MagiccTime
 name: MagiccTime
 version: '1.0'
@@ -6,6 +7,6 @@ load: POSTWORLD
 author: MagiccMax
 commands:
    playTime:
-      description: Your description
+      description: shows your playtime
       usage: /playTime
       permission: magicctime.playtimeCMD

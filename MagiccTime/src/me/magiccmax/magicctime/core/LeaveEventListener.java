@@ -22,16 +22,11 @@ public class LeaveEventListener implements Listener{
 	
 	public void save(Player player) {
 		
-		File dir = new File("./plugins/MagiccMax/MagiccTime/cplaytimes");
-		if(!dir.exists()) {
-			dir.mkdirs();
-		}
 		File pFile = new File("./plugins/MagiccMax/MagiccTime/playtimes/" + player.getUniqueId() + ".dat");
 		if(!pFile.exists()) {
 			try {
 				pFile.createNewFile();
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
@@ -40,7 +35,6 @@ public class LeaveEventListener implements Listener{
 				os.writeLong(((long) System.currentTimeMillis()) - MagiccTime.instance.timeMap.remove(player));
 				os.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} else {
@@ -50,7 +44,6 @@ public class LeaveEventListener implements Listener{
 				already = os.readLong();
 				os.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
@@ -58,7 +51,6 @@ public class LeaveEventListener implements Listener{
 				os.writeLong(((long) System.currentTimeMillis()) - MagiccTime.instance.timeMap.remove(player) + already);
 				os.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
